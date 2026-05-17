@@ -50,7 +50,7 @@ href="index.css">
             Diseños web modernos, premium y personalizados.
         </p>
 
-        <button onclick="enterWebsite()">
+        <button id="enterBtn">
 
             Entrar al sitio
 
@@ -808,6 +808,12 @@ Cerrar
 
 <script>
 
+const enterBtn =
+document.getElementById("enterBtn");
+
+const intro =
+document.getElementById("introScreen");
+
 function enterWebsite(){
 
 document.body.classList.remove(
@@ -816,24 +822,26 @@ document.body.classList.remove(
 
 document.body.style.overflow="auto";
 
-const intro =
-document.getElementById(
-"introScreen"
-);
-
 intro.style.opacity="0";
-
-intro.style.pointerEvents="none";
-
-intro.style.transition="0.25s";
 
 setTimeout(()=>{
 
-intro.style.display="none";
+intro.remove();
 
-},250);
+},200);
 
 }
+
+enterBtn.addEventListener(
+"touchstart",
+enterWebsite,
+{passive:true}
+);
+
+enterBtn.addEventListener(
+"click",
+enterWebsite
+);
 
 </script>
 
