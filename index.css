@@ -30,6 +30,17 @@ body{
 
 }
 
+body.intro-active nav,
+body.intro-active section,
+body.intro-active .bg-blur,
+body.intro-active .floating-contact,
+body.intro-active .contact-modal,
+body.intro-active .ticket-success{
+
+display:none;
+
+}
+
 /* FONDO */
 
 .bg-blur{
