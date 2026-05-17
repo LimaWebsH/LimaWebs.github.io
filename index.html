@@ -20,6 +20,25 @@ crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
 rel="stylesheet">
 
+<style>
+body{
+    margin:0;
+    background:#07111f;
+    overflow:hidden;
+}
+
+body.intro-active > *:not(#introScreen){
+    visibility:hidden;
+}
+
+#introScreen{
+    visibility:visible;
+    position:fixed;
+    inset:0;
+    z-index:9999999;
+}
+</style>
+
 <link rel="stylesheet"
 href="index.css">
 
@@ -30,7 +49,7 @@ href="index.css">
 
 </head>
 
-<body>
+<body class="intro-active" style="overflow:hidden;">
 
     <div class="intro-screen" id="introScreen">
 
@@ -59,11 +78,6 @@ href="index.css">
     </div>
 
 </div>
-
-
-</head>
-
-<body>
 
 <div class="bg-blur blur1"></div>
 <div class="bg-blur blur2"></div>
@@ -807,13 +821,19 @@ Cerrar
 </div>
 `;
 
-}
+};
 
 </script>
 
 <script>
 
 function enterWebsite(){
+
+document.body.classList.remove(
+"intro-active"
+);
+
+document.body.style.overflow="auto";
 
 const intro =
 document.getElementById(
