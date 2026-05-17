@@ -2248,6 +2248,8 @@ animation:floatGlow 6s infinite ease-in-out;
 
 .intro-content{
 
+pointer-events:auto;
+
 position:relative;
 
 z-index:2;
@@ -2296,6 +2298,14 @@ margin-bottom:40px;
 }
 
 .intro-content button{
+
+position:relative;
+
+z-index:99999999;
+
+pointer-events:auto;
+
+touch-action:manipulation;
 
 padding:20px 55px;
 
