@@ -2235,7 +2235,8 @@ height:100dvh;
 min-height:100dvh;
 
 background:
-radial-gradient(circle at top left,#2d6cff,#050816 60%);
+radial-gradient(circle at top left,#2d6cff,#050816 60%),
+linear-gradient(135deg,#101f4d,#1b0b38);
 
 display:flex;
 
