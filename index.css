@@ -2253,6 +2253,8 @@ animation:introFade 1.5s ease;
 
 .intro-screen::before{
 
+pointer-events:none;
+
 content:"";
 
 position:absolute;
@@ -2279,6 +2281,8 @@ animation:floatGlow 6s infinite ease-in-out;
 pointer-events:auto;
 
 position:relative;
+
+z-index:999999999;
 
 z-index:2;
 
