@@ -812,27 +812,35 @@ document.getElementById("introScreen");
 
 function enterWebsite(){
 
+intro.style.transition =
+"opacity 0.35s ease";
+
+intro.style.opacity = "0";
+
+setTimeout(()=>{
+
+intro.style.display = "none";
+
 document.body.classList.remove(
 "intro-active"
 );
 
-document.body.style.overflow="auto";
+document.body.style.overflow = "auto";
 
-intro.style.opacity="0";
-
-intro.remove();
+},350);
 
 }
 
 enterBtn.addEventListener(
-"touchstart",
-enterWebsite,
-{passive:true}
-);
+"touchend",
+function(e){
 
-enterBtn.addEventListener(
-"click",
-enterWebsite
+e.preventDefault();
+
+enterWebsite();
+
+},
+{passive:false}
 );
 
 </script>
